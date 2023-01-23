@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - name: Use Node.js
         uses: actions/setup-node@v2
         with:
@@ -17,3 +17,6 @@ jobs:
 
       - name: Install dependencies
         run: npm install
+
+      - name: Build Dist File
+        run: npm run build
